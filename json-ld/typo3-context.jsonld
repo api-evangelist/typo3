@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "typo3": "https://get.typo3.org/api/v1/",
+    "aid": "https://apis.io/vocabulary/aid",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "releaseNotes": "schema:releaseNotes",
+    "datePublished": "schema:datePublished",
+    "softwareVersion": "schema:softwareVersion",
+    "operatingSystem": "schema:operatingSystem",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "SoftwareSourceCode": "schema:SoftwareSourceCode",
+    "majorVersion": {
+      "@id": "typo3:major",
+      "@type": "@id"
+    },
+    "release": {
+      "@id": "typo3:release",
+      "@type": "@id"
+    },
+    "requirements": {
+      "@id": "typo3:requirements",
+      "@type": "@id"
+    },
+    "sitepackage": {
+      "@id": "typo3:sitepackage",
+      "@type": "@id"
+    }
+  },
+  "@type": "SoftwareApplication",
+  "@id": "https://get.typo3.org",
+  "name": "TYPO3 CMS",
+  "description": "TYPO3 is an open-source enterprise PHP content management system with a REST API for releases, versions, and upgrade paths.",
+  "url": "https://typo3.org",
+  "sameAs": [
+    "https://github.com/TYPO3",
+    "https://docs.typo3.org"
+  ]
+}

@@ -1,0 +1,544 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "get.typo3.org",
+        "description": "REST API for getting information about TYPO3 releases",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/cache/majorVersion/{version}": {
+            "delete": {
+                "summary": "Purge caches related to TYPO3 major version.",
+                "operationId": "delete_app_api_cache_purgemajorrelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/cache/release/{version}": {
+            "delete": {
+                "summary": "Purge caches related to single TYPO3 release.",
+                "operationId": "delete_app_api_cache_purgerelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/release/": {
+            "get": {
+                "summary": "Get releases by major version.",
+                "operationId": "get_app_api_majorversion_releases_getreleasesbymajorversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/release/latest": {
+            "get": {
+                "summary": "Get latest release of a major version.",
+                "operationId": "get_app_api_majorversion_releases_getlatestreleasebymajorversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/release/latest/security": {
+            "get": {
+                "summary": "Get latest security release of a major version.",
+                "operationId": "get_app_api_majorversion_releases_getlatestsecurityreleasebymajorversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/release/latest/content": {
+            "get": {
+                "summary": "Get latest release of a major version.",
+                "operationId": "get_app_api_majorversion_releases_getlatestreleasecontentbymajorversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/requirements": {
+            "get": {
+                "summary": "Get TYPO3 major version requirements.",
+                "operationId": "get_app_api_majorversion_requirements_getrequirementsbymajorversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/requirement/": {
+            "post": {
+                "summary": "Create new major TYPO3 version requirement.",
+                "operationId": "post_app_api_majorversion_requirements_addrequirement",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update requirement of major TYPO3 version.",
+                "operationId": "patch_app_api_majorversion_requirements_updaterequirement",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}/requirement/{category}/{name}": {
+            "delete": {
+                "summary": "Delete requirement of major TYPO3 version.",
+                "operationId": "delete_app_api_majorversion_requirements_deleterequirement",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "category",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/": {
+            "get": {
+                "summary": "Get information about a major TYPO3 version.",
+                "operationId": "get_app_api_majorversion_getmajorreleases",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create new major TYPO3 version.",
+                "operationId": "post_app_api_majorversion_createmajorrelease",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/major/{version}": {
+            "get": {
+                "summary": "Get hard facts of a major TYPO3 Release.",
+                "operationId": "get_majorVersion_show",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete major TYPO3 version.",
+                "operationId": "delete_app_api_majorversion_deletemajorrelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update properties of major TYPO3 version.",
+                "operationId": "patch_app_api_majorversion_updatemajorrelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/release/": {
+            "get": {
+                "summary": "Get information about all TYPO3 releases or a specific release.",
+                "operationId": "get_app_api_release_getrelease",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add new TYPO3 release.",
+                "operationId": "post_app_api_release_addrelease",
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/release/{version}": {
+            "get": {
+                "summary": "Get information about all TYPO3 releases or a specific release.",
+                "operationId": "get_release_show",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete TYPO3 release.",
+                "operationId": "delete_app_api_release_deleterelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "summary": "Update TYPO3 Release.",
+                "operationId": "patch_app_api_release_updaterelease",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/release/{version}/release-notes": {
+            "put": {
+                "summary": "Add TYPO3 Release Notes for Version.",
+                "operationId": "put_app_api_release_addreleasenotesforversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/release/{version}/content": {
+            "get": {
+                "summary": "Get TYPO3 Release Content.",
+                "operationId": "get_app_api_release_getcontentforversion",
+                "parameters": [
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/v1/sitepackage/": {
+            "post": {
+                "tags": [
+                    "sitepackage"
+                ],
+                "operationId": "post_app_api_sitepackage_createsitepackage",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SitePackageType"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successfully generated.",
+                        "content": {
+                            "application/zip": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Request malformed."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SitePackageType": {
+                "required": [
+                    "base_package",
+                    "typo3_version",
+                    "title",
+                    "author"
+                ],
+                "properties": {
+                    "base_package": {
+                        "type": "string",
+                        "example": "bootstrap_package"
+                    },
+                    "typo3_version": {
+                        "type": "float",
+                        "example": 14.300000000000001
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "My SitePackage"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Project Configuration for Client"
+                    },
+                    "repository_url": {
+                        "type": "string",
+                        "example": "https://github.com/FriendsOfTYPO3/introduction"
+                    },
+                    "author": {
+                        "$ref": "#/components/schemas/AuthorType"
+                    }
+                },
+                "type": "object"
+            },
+            "AuthorType": {
+                "required": [
+                    "name",
+                    "email",
+                    "company",
+                    "homepage"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "J. Doe"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "info@typo3.com"
+                    },
+                    "company": {
+                        "type": "string",
+                        "example": "TYPO3"
+                    },
+                    "homepage": {
+                        "type": "string",
+                        "example": "https://typo3.com"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "Basic": {
+                "type": "http",
+                "scheme": "basic"
+            }
+        }
+    },
+    "security": [
+        {
+            "Basic": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "sitepackage"
+        }
+    ]
+}

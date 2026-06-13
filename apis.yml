@@ -63,6 +63,8 @@ apis:
     properties:
       - type: Documentation
         url: https://get.typo3.org/api/doc
+      - type: OpenAPI
+        url: openapi/typo3-releases-openapi.json
       - type: BaseURL
         url: https://get.typo3.org/api
   - aid: typo3:extension-rest-api
