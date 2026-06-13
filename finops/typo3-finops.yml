@@ -1,0 +1,74 @@
+name: TYPO3 FinOps
+description: >-
+  TYPO3 is open-source software with no licensing or per-call API costs.
+  Financial considerations for TYPO3 API deployments center entirely on
+  infrastructure, hosting, and optional commercial support services.
+  Organizations should plan for self-hosting costs, optional ELTS subscriptions
+  for legacy version support, and any professional services needed for
+  enterprise deployments.
+url: https://typo3.com/blog/get-more-value-from-your-typo3-membership-with-elts-v104-pricing
+created: '2026-06-13'
+modified: '2026-06-13'
+costModel:
+  type: open-source
+  licensingCost: 0
+  apiCallCost: 0
+  currency: USD
+  notes: >-
+    TYPO3 core and its REST APIs (Headless JSON API, t3api, get.typo3.org API)
+    carry zero licensing costs. All cost is infrastructure-based.
+costCategories:
+  - category: Hosting Infrastructure
+    description: >-
+      Web server, PHP runtime, database (MySQL/MariaDB/PostgreSQL), and file
+      storage costs for self-hosted TYPO3 deployments. Scales with traffic
+      volume and content complexity.
+    estimatedRange: varies
+    driver: server resources, traffic, storage
+    optimization:
+      - Use PHP OPcache and TYPO3 caching framework to reduce PHP execution overhead
+      - Enable TYPO3 page cache and object cache (Redis/Memcached) to minimize database queries
+      - Serve headless JSON API responses via CDN to reduce origin load
+      - Use database read replicas for high-traffic read-heavy API deployments
+  - category: Extended Long Term Support (ELTS)
+    description: >-
+      Optional paid subscription for security patches beyond community EOL.
+      Relevant for organizations unable to upgrade to a current TYPO3 LTS
+      release on schedule.
+    estimatedRange: contact TYPO3 GmbH for current rates
+    driver: TYPO3 version, subscription tier, TYPO3 Association membership level
+    optimization:
+      - TYPO3 Association members receive discounted ELTS rates
+      - Plan major version upgrades to minimize reliance on ELTS
+      - Budget ELTS as risk mitigation for legacy systems during migration phases
+  - category: CDN and Edge Delivery
+    description: >-
+      Content Delivery Network costs for caching and accelerating headless JSON
+      API responses globally. Particularly important for high-traffic headless
+      TYPO3 deployments serving PWA or SPA frontends.
+    estimatedRange: varies by provider and traffic volume
+    driver: bandwidth, requests, geographic distribution
+    optimization:
+      - Cache immutable API responses aggressively at the edge
+      - Set appropriate Cache-Control headers in TYPO3 headless responses
+      - Use TYPO3 content hashing to enable long-lived CDN caching with cache invalidation
+  - category: Professional Services
+    description: >-
+      Development, integration, and support services from TYPO3 agencies or
+      certified integrators for enterprise deployments requiring custom API
+      work, headless implementations, or performance tuning.
+    estimatedRange: market rates, typically EUR 100-200/hour for certified integrators
+    driver: project complexity, customization requirements
+    optimization:
+      - Use TYPO3-certified integrators for efficient project delivery
+      - Leverage existing extensions from extensions.typo3.org before custom development
+      - Engage TYPO3 GmbH for enterprise support contracts covering API deployments
+savingsOpportunities:
+  - description: Self-host on cloud instances sized to actual load; auto-scale for traffic spikes
+    estimatedSavings: 20-40% vs. over-provisioned static hosting
+  - description: Use TYPO3 built-in caching framework with Redis backend to reduce database costs
+    estimatedSavings: significant reduction in DB query volume and associated costs
+  - description: Upgrade to current TYPO3 LTS to avoid ELTS subscription fees
+    estimatedSavings: eliminates ELTS cost entirely
+  - description: Serve headless JSON via CDN to reduce origin server compute costs
+    estimatedSavings: 50-80% reduction in origin requests for read-heavy API workloads

@@ -1,0 +1,114 @@
+aid: typo3
+name: TYPO3
+description: >-
+  TYPO3 is an open-source enterprise PHP content management system providing
+  REST APIs via the TYPO3 Headless extension and get.typo3.org release API for
+  managing pages, content elements, media, navigation, and site configuration.
+  The headless JSON content API delivers structured page and content data to
+  decoupled frontend applications such as PWAs and SPAs.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/typo3/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - CMS
+  - Content Management
+  - Enterprise
+  - PHP
+  - Headless
+  - JSON API
+  - Open Source
+apis:
+  - aid: typo3:headless-json-api
+    name: TYPO3 Headless JSON Content API
+    description: >-
+      The TYPO3 Headless extension provides a JSON API for delivering page
+      content, navigation structures, layouts, and media to decoupled frontend
+      applications. Responds with JSON when the Accept header is set to
+      application/json, enabling hybrid HTML and headless deployments from a
+      single TYPO3 instance.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+    baseURL: https://example.typo3.org
+    tags:
+      - Content
+      - Pages
+      - Navigation
+      - JSON
+      - Headless
+      - PWA
+    properties:
+      - type: Documentation
+        url: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+      - type: GitHubRepository
+        url: https://github.com/TYPO3-Headless/headless
+      - type: Extensions
+        url: https://extensions.typo3.org/extension/headless
+  - aid: typo3:releases-api
+    name: TYPO3 Releases REST API
+    description: >-
+      The get.typo3.org REST API provides information on available TYPO3 CMS
+      releases, versions, and upgrade paths. Used internally by the TYPO3 Core
+      to check for available upgrades and download new versions, this public API
+      exposes structured release metadata for all supported TYPO3 versions.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://get.typo3.org/api/doc
+    baseURL: https://get.typo3.org/api
+    tags:
+      - Releases
+      - Versions
+      - Upgrades
+      - CMS
+    properties:
+      - type: Documentation
+        url: https://get.typo3.org/api/doc
+      - type: BaseURL
+        url: https://get.typo3.org/api
+  - aid: typo3:extension-rest-api
+    name: TYPO3 REST API Extension (t3api)
+    description: >-
+      The sourcebroker/t3api extension provides an easy-to-configure REST API
+      layer for TYPO3 Extbase models. APIs are configured with PHP annotations
+      on classes, properties, and methods, with partial support for JSON-LD and
+      Hydra for auto-discoverable frontend applications.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
+    baseURL: https://example.typo3.org
+    tags:
+      - REST
+      - Extbase
+      - Extensions
+      - JSON-LD
+      - Hydra
+    properties:
+      - type: Documentation
+        url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
+      - type: GettingStarted
+        url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/GettingStarted/Index.html
+common:
+  - type: Website
+    url: https://typo3.org
+  - type: Documentation
+    url: https://docs.typo3.org
+  - type: GitHubOrg
+    url: https://github.com/TYPO3
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/typo3-gmbh
+  - type: Blog
+    url: https://typo3.com/blog
+  - type: Pricing
+    url: https://typo3.com/typo3-cms/what-is-typo3/open-source/licenses
+  - type: StatusPage
+    url: https://status.typo3.org
+  - type: X
+    url: https://twitter.com/typo3
+  - type: Plans
+    url: plans/typo3-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/typo3-rate-limits.yml
+  - type: FinOps
+    url: finops/typo3-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

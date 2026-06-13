@@ -1,0 +1,63 @@
+name: TYPO3 Plans and Pricing
+description: >-
+  TYPO3 CMS is free and open-source software licensed under the GNU General
+  Public License (GPLv2 or later). There are no licensing fees for the core
+  CMS. The TYPO3 Association and TYPO3 GmbH offer optional paid services
+  including Extended Long Term Support (ELTS), certifications, and training
+  programs for organizations requiring professional backing.
+url: https://typo3.com/typo3-cms/what-is-typo3/open-source/licenses
+created: '2026-06-13'
+modified: '2026-06-13'
+plans:
+  - name: Open Source (Free)
+    description: >-
+      The TYPO3 CMS core is completely free and open-source under GPLv2+. All
+      standard releases, documentation, and community support channels are
+      available at no cost. Self-hosted deployments incur no licensing fees.
+    url: https://typo3.org/cms/download
+    price: 0
+    currency: USD
+    unit: forever
+    features:
+      - Full TYPO3 CMS core access
+      - Community forum support (talk.typo3.org)
+      - Access to extensions via extensions.typo3.org
+      - Official documentation at docs.typo3.org
+      - Security patches for supported versions
+      - REST API (Headless extension, t3api)
+      - get.typo3.org release API access
+  - name: Extended Long Term Support (ELTS)
+    description: >-
+      Paid subscription providing continued security and bug fix patches for
+      TYPO3 versions that have reached end-of-life in community support.
+      Allows organizations to continue running older TYPO3 versions with
+      maintained security coverage beyond the standard support window.
+    url: https://elts.typo3.com
+    price: null
+    currency: EUR
+    unit: per year (contact for pricing)
+    features:
+      - Security patches beyond community EOL
+      - Bug fix releases
+      - Compatibility with older TYPO3 versions
+      - SLA-backed support
+      - Access to ELTS package server
+  - name: TYPO3 Association Membership
+    description: >-
+      Optional organizational membership supporting the TYPO3 ecosystem.
+      Members receive discounts on ELTS subscriptions and contribute to funding
+      core development, documentation, and community events.
+    url: https://typo3.org/community/association/membership
+    price: null
+    currency: EUR
+    unit: per year (tiered by organization type)
+    features:
+      - Discounted ELTS subscriptions
+      - Voting rights in TYPO3 Association
+      - Support for core development
+      - Access to member benefits
+notes: >-
+  TYPO3 itself carries no per-API-call fees or usage-based pricing. The REST
+  APIs (Headless JSON API, get.typo3.org Release API, t3api extension) are all
+  open-source components available free of charge. Infrastructure and hosting
+  costs are the sole financial consideration for self-hosted deployments.

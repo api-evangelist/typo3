@@ -1,0 +1,55 @@
+name: TYPO3 Rate Limits
+description: >-
+  TYPO3 is self-hosted open-source software; there are no centrally enforced
+  API rate limits imposed by the TYPO3 project itself. Rate limiting for the
+  TYPO3 Headless JSON API and any custom REST endpoints is the responsibility
+  of the individual site operator and their hosting infrastructure. The
+  get.typo3.org release API is a public endpoint without documented rate limits,
+  but responsible use is expected.
+url: https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/Index.html
+created: '2026-06-13'
+modified: '2026-06-13'
+rateLimits:
+  - api: TYPO3 Headless JSON Content API
+    description: >-
+      No centrally enforced rate limits. The site operator controls throughput
+      via web server configuration (nginx/Apache), CDN settings, or reverse
+      proxy rules. Recommended to implement rate limiting at the infrastructure
+      level for production deployments.
+    limit: null
+    window: null
+    enforcement: operator-defined
+    notes: >-
+      Use nginx rate limiting (limit_req_zone), Apache mod_ratelimit, or a
+      CDN/WAF layer to protect headless endpoints. TYPO3 core provides no
+      built-in HTTP rate limiting middleware.
+  - api: get.typo3.org Release API
+    description: >-
+      Public REST API operated by the TYPO3 Association. No documented rate
+      limits. Used by TYPO3 Core upgrade checks; typical usage is infrequent
+      polling (once per upgrade check cycle). Excessive automated polling is
+      discouraged as a courtesy to the shared service.
+    limit: null
+    window: null
+    enforcement: none-documented
+    notes: >-
+      The TYPO3 core polls this API during upgrade checks. Automated scripts
+      should implement appropriate backoff and caching to avoid excessive load
+      on the public endpoint.
+  - api: t3api Extension REST API
+    description: >-
+      No built-in rate limiting. The t3api extension exposes Extbase model data
+      as REST endpoints; rate limiting must be configured at the infrastructure
+      or middleware level by the deploying organization.
+    limit: null
+    window: null
+    enforcement: operator-defined
+    notes: >-
+      Consider adding rate limiting via TYPO3 middleware, nginx, or an API
+      gateway in front of t3api endpoints for production use.
+recommendations:
+  - Implement nginx limit_req_zone or equivalent for all public-facing API endpoints
+  - Use a CDN with WAF rules to absorb high traffic and block abusive clients
+  - Cache JSON API responses at the CDN or reverse proxy layer to reduce backend load
+  - Monitor access logs for unusual patterns and implement IP-based blocking as needed
+  - For ELTS environments, coordinate with TYPO3 GmbH on supported infrastructure patterns
