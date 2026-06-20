@@ -6,7 +6,7 @@ description: >-
   managing pages, content elements, media, navigation, and site configuration.
   The headless JSON content API delivers structured page and content data to
   decoupled frontend applications such as PWAs and SPAs.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/typo3/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -28,7 +28,7 @@ apis:
       applications. Responds with JSON when the Accept header is set to
       application/json, enabling hybrid HTML and headless deployments from a
       single TYPO3 instance.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
     baseURL: https://example.typo3.org
     tags:
@@ -52,7 +52,7 @@ apis:
       releases, versions, and upgrade paths. Used internally by the TYPO3 Core
       to check for available upgrades and download new versions, this public API
       exposes structured release metadata for all supported TYPO3 versions.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://get.typo3.org/api/doc
     baseURL: https://get.typo3.org/api
     tags:
@@ -74,7 +74,7 @@ apis:
       layer for TYPO3 Extbase models. APIs are configured with PHP annotations
       on classes, properties, and methods, with partial support for JSON-LD and
       Hydra for auto-discoverable frontend applications.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
     baseURL: https://example.typo3.org
     tags:
