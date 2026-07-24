@@ -1,0 +1,204 @@
+openapi: 3.0.0
+info:
+  title: get.typo3.org Cache Major API
+  description: REST API for getting information about TYPO3 releases
+  version: 1.0.0
+security:
+- Basic: []
+tags:
+- name: Major
+paths:
+  /api/v1/major/{version}/release/:
+    get:
+      summary: Get releases by major version.
+      operationId: get_app_api_majorversion_releases_getreleasesbymajorversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/release/latest:
+    get:
+      summary: Get latest release of a major version.
+      operationId: get_app_api_majorversion_releases_getlatestreleasebymajorversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/release/latest/security:
+    get:
+      summary: Get latest security release of a major version.
+      operationId: get_app_api_majorversion_releases_getlatestsecurityreleasebymajorversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/release/latest/content:
+    get:
+      summary: Get latest release of a major version.
+      operationId: get_app_api_majorversion_releases_getlatestreleasecontentbymajorversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/requirements:
+    get:
+      summary: Get TYPO3 major version requirements.
+      operationId: get_app_api_majorversion_requirements_getrequirementsbymajorversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/requirement/:
+    post:
+      summary: Create new major TYPO3 version requirement.
+      operationId: post_app_api_majorversion_requirements_addrequirement
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+    patch:
+      summary: Update requirement of major TYPO3 version.
+      operationId: patch_app_api_majorversion_requirements_updaterequirement
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}/requirement/{category}/{name}:
+    delete:
+      summary: Delete requirement of major TYPO3 version.
+      operationId: delete_app_api_majorversion_requirements_deleterequirement
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: category
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/:
+    get:
+      summary: Get information about a major TYPO3 version.
+      operationId: get_app_api_majorversion_getmajorreleases
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+    post:
+      summary: Create new major TYPO3 version.
+      operationId: post_app_api_majorversion_createmajorrelease
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+  /api/v1/major/{version}:
+    get:
+      summary: Get hard facts of a major TYPO3 Release.
+      operationId: get_majorVersion_show
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+    delete:
+      summary: Delete major TYPO3 version.
+      operationId: delete_app_api_majorversion_deletemajorrelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+    patch:
+      summary: Update properties of major TYPO3 version.
+      operationId: patch_app_api_majorversion_updatemajorrelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Major
+components:
+  securitySchemes:
+    Basic:
+      type: http
+      scheme: basic

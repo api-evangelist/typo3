@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: get.typo3.org Cache sitepackage API
+  description: REST API for getting information about TYPO3 releases
+  version: 1.0.0
+security:
+- Basic: []
+tags:
+- name: sitepackage
+paths:
+  /api/v1/sitepackage/:
+    post:
+      tags:
+      - sitepackage
+      operationId: post_app_api_sitepackage_createsitepackage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SitePackageType'
+      responses:
+        '200':
+          description: Successfully generated.
+          content:
+            application/zip: {}
+        '400':
+          description: Request malformed.
+components:
+  schemas:
+    AuthorType:
+      required:
+      - name
+      - email
+      - company
+      - homepage
+      properties:
+        name:
+          type: string
+          example: J. Doe
+        email:
+          type: string
+          example: info@typo3.com
+        company:
+          type: string
+          example: TYPO3
+        homepage:
+          type: string
+          example: https://typo3.com
+      type: object
+    SitePackageType:
+      required:
+      - base_package
+      - typo3_version
+      - title
+      - author
+      properties:
+        base_package:
+          type: string
+          example: bootstrap_package
+        typo3_version:
+          type: float
+          example: 14.3
+        title:
+          type: string
+          example: My SitePackage
+        description:
+          type: string
+          example: Project Configuration for Client
+        repository_url:
+          type: string
+          example: https://github.com/FriendsOfTYPO3/introduction
+        author:
+          $ref: '#/components/schemas/AuthorType'
+      type: object
+  securitySchemes:
+    Basic:
+      type: http
+      scheme: basic

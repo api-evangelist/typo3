@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: get.typo3.org Cache Release API
+  description: REST API for getting information about TYPO3 releases
+  version: 1.0.0
+security:
+- Basic: []
+tags:
+- name: Release
+paths:
+  /api/v1/release/:
+    get:
+      summary: Get information about all TYPO3 releases or a specific release.
+      operationId: get_app_api_release_getrelease
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+    post:
+      summary: Add new TYPO3 release.
+      operationId: post_app_api_release_addrelease
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+  /api/v1/release/{version}:
+    get:
+      summary: Get information about all TYPO3 releases or a specific release.
+      operationId: get_release_show
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+    delete:
+      summary: Delete TYPO3 release.
+      operationId: delete_app_api_release_deleterelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+    patch:
+      summary: Update TYPO3 Release.
+      operationId: patch_app_api_release_updaterelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+  /api/v1/release/{version}/release-notes:
+    put:
+      summary: Add TYPO3 Release Notes for Version.
+      operationId: put_app_api_release_addreleasenotesforversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+  /api/v1/release/{version}/content:
+    get:
+      summary: Get TYPO3 Release Content.
+      operationId: get_app_api_release_getcontentforversion
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Release
+components:
+  securitySchemes:
+    Basic:
+      type: http
+      scheme: basic

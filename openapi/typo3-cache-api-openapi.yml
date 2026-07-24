@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: get.typo3.org Cache API
+  description: REST API for getting information about TYPO3 releases
+  version: 1.0.0
+security:
+- Basic: []
+tags:
+- name: Cache
+paths:
+  /api/v1/cache/majorVersion/{version}:
+    delete:
+      summary: Purge caches related to TYPO3 major version.
+      operationId: delete_app_api_cache_purgemajorrelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Cache
+  /api/v1/cache/release/{version}:
+    delete:
+      summary: Purge caches related to single TYPO3 release.
+      operationId: delete_app_api_cache_purgerelease
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: ''
+      tags:
+      - Cache
+components:
+  securitySchemes:
+    Basic:
+      type: http
+      scheme: basic
