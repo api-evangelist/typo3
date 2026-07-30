@@ -6,7 +6,20 @@ description: >-
   managing pages, content elements, media, navigation, and site configuration.
   The headless JSON content API delivers structured page and content data to
   decoupled frontend applications such as PWAs and SPAs.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/typo3.png
 url: https://raw.githubusercontent.com/api-evangelist/typo3/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -20,74 +33,105 @@ tags:
   - JSON API
   - Open Source
 apis:
-  - aid: typo3:headless-json-api
-    name: TYPO3 Headless JSON Content API
-    description: >-
-      The TYPO3 Headless extension provides a JSON API for delivering page
-      content, navigation structures, layouts, and media to decoupled frontend
-      applications. Responds with JSON when the Accept header is set to
-      application/json, enabling hybrid HTML and headless deployments from a
-      single TYPO3 instance.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
-    baseURL: https://example.typo3.org
-    tags:
-      - Content
-      - Pages
-      - Navigation
-      - JSON
-      - Headless
-      - PWA
-    properties:
-      - type: Documentation
-        url: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
-      - type: GitHubRepository
-        url: https://github.com/TYPO3-Headless/headless
-      - type: Extensions
-        url: https://extensions.typo3.org/extension/headless
-  - aid: typo3:releases-api
-    name: TYPO3 Releases REST API
-    description: >-
-      The get.typo3.org REST API provides information on available TYPO3 CMS
-      releases, versions, and upgrade paths. Used internally by the TYPO3 Core
-      to check for available upgrades and download new versions, this public API
-      exposes structured release metadata for all supported TYPO3 versions.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://get.typo3.org/api/doc
-    baseURL: https://get.typo3.org/api
-    tags:
-      - Releases
-      - Versions
-      - Upgrades
-      - CMS
-    properties:
-      - type: Documentation
-        url: https://get.typo3.org/api/doc
-      - type: OpenAPI
-        url: openapi/typo3-releases-openapi.json
-      - type: BaseURL
-        url: https://get.typo3.org/api
-  - aid: typo3:extension-rest-api
-    name: TYPO3 REST API Extension (t3api)
-    description: >-
-      The sourcebroker/t3api extension provides an easy-to-configure REST API
-      layer for TYPO3 Extbase models. APIs are configured with PHP annotations
-      on classes, properties, and methods, with partial support for JSON-LD and
-      Hydra for auto-discoverable frontend applications.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
-    baseURL: https://example.typo3.org
-    tags:
-      - REST
-      - Extbase
-      - Extensions
-      - JSON-LD
-      - Hydra
-    properties:
-      - type: Documentation
-        url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
-      - type: GettingStarted
-        url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/GettingStarted/Index.html
+- aid: typo3:headless-json-api
+  name: TYPO3 Headless JSON Content API
+  description: >-
+    The TYPO3 Headless extension provides a JSON API for delivering page content, navigation structures,
+    layouts, and media to decoupled frontend applications. Responds with JSON when the Accept header is
+    set to application/json, enabling hybrid HTML and headless deployments from a single TYPO3 instance.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  baseURL: https://example.typo3.org
+  tags:
+  - Content
+  - Pages
+  - Navigation
+  - JSON
+  - Headless
+  - PWA
+  properties:
+  - type: Documentation
+    url: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  - type: GitHubRepository
+    url: https://github.com/TYPO3-Headless/headless
+  - type: Extensions
+    url: https://extensions.typo3.org/extension/headless
+- aid: typo3:extension-rest-api
+  name: TYPO3 REST API Extension (t3api)
+  description: >-
+    The sourcebroker/t3api extension provides an easy-to-configure REST API layer for TYPO3 Extbase models.
+    APIs are configured with PHP annotations on classes, properties, and methods, with partial support
+    for JSON-LD and Hydra for auto-discoverable frontend applications.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
+  baseURL: https://example.typo3.org
+  tags:
+  - REST
+  - Extbase
+  - Extensions
+  - JSON-LD
+  - Hydra
+  properties:
+  - type: Documentation
+    url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/
+  - type: GettingStarted
+    url: https://docs.typo3.org/p/sourcebroker/t3api/main/en-us/GettingStarted/Index.html
+- aid: typo3:typo3-cache-api
+  name: TYPO3 Cache API
+  description: The Cache API from TYPO3 — 2 operation(s) for cache.
+  humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  baseURL: https://example.typo3.org
+  tags:
+  - Cache
+  properties:
+  - type: OpenAPI
+    url: openapi/typo3-cache-api-openapi.yml
+  - type: Documentation
+    url: https://get.typo3.org/api/doc
+  - type: BaseURL
+    url: https://get.typo3.org/api
+- aid: typo3:typo3-major-api
+  name: TYPO3 Major API
+  description: The Major API from TYPO3 — 9 operation(s) for major.
+  humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  baseURL: https://example.typo3.org
+  tags:
+  - Major
+  properties:
+  - type: OpenAPI
+    url: openapi/typo3-major-api-openapi.yml
+  - type: Documentation
+    url: https://get.typo3.org/api/doc
+  - type: BaseURL
+    url: https://get.typo3.org/api
+- aid: typo3:typo3-release-api
+  name: TYPO3 Release API
+  description: The Release API from TYPO3 — 4 operation(s) for release.
+  humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  baseURL: https://example.typo3.org
+  tags:
+  - Release
+  properties:
+  - type: OpenAPI
+    url: openapi/typo3-release-api-openapi.yml
+  - type: Documentation
+    url: https://get.typo3.org/api/doc
+  - type: BaseURL
+    url: https://get.typo3.org/api
+- aid: typo3:typo3-sitepackage-api
+  name: TYPO3 sitepackage API
+  description: The sitepackage API from TYPO3 — 1 operation(s) for sitepackage.
+  humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
+  baseURL: https://example.typo3.org
+  tags:
+  - sitepackage
+  properties:
+  - type: OpenAPI
+    url: openapi/typo3-sitepackage-api-openapi.yml
+  - type: Documentation
+    url: https://get.typo3.org/api/doc
+  - type: BaseURL
+    url: https://get.typo3.org/api
 common:
   - type: AgenticAccess
     url: agentic-access/typo3-agentic-access.yml
