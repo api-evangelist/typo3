@@ -1,0 +1,20 @@
+{
+  "provider": "typo3",
+  "sources": [
+    "typo3-cache-api-openapi.yml",
+    "typo3-major-api-openapi.yml",
+    "typo3-release-api-openapi.yml",
+    "typo3-sitepackage-api-openapi.yml"
+  ],
+  "outputs": [
+    "typo3-cache-api-openapi.yml",
+    "typo3-major-api-openapi.yml",
+    "typo3-release-api-openapi.yml",
+    "typo3-sitepackage-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

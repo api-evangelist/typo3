@@ -2,18 +2,21 @@
   "repo": "typo3",
   "feeds": [
     {
-      "source": "https://news.typo3.com/",
-      "feed_url": "https://news.typo3.com/",
+      "source": "https://news.typo3.com/rss",
+      "feed_url": "https://news.typo3.com/rss",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "feed"
     },
     {
       "source": "https://www.linkedin.com/company/typo3-gmbh",
-      "error": "HTTPError"
+      "feed_url": "https://www.linkedin.com/company/typo3-gmbh",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 9,
-  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 37,
+  "fetched": "2026-08-01T15:49:00Z",
   "agent_pulled": "2026-07-04"
 }
