@@ -133,6 +133,9 @@ apis:
   - type: BaseURL
     url: https://get.typo3.org/api
 common:
+  - type: License
+    name: GPL-2.0
+    url: https://github.com/TYPO3-Headless/headless/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/typo3-agentic-access.yml
   - type: DomainSecurity
