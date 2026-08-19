@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "get.typo3.org Cache Release API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Release",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get information about all TYPO3 releases or a specific release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/release/"
+          },
+          "docs": "Get information about all TYPO3 releases or a specific release."
+        },
+        {
+          "info": {
+            "name": "Add new TYPO3 release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/v1/release/"
+          },
+          "docs": "Add new TYPO3 release."
+        },
+        {
+          "info": {
+            "name": "Get information about all TYPO3 releases or a specific release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/release/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get information about all TYPO3 releases or a specific release."
+        },
+        {
+          "info": {
+            "name": "Update TYPO3 Release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/api/v1/release/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update TYPO3 Release."
+        },
+        {
+          "info": {
+            "name": "Delete TYPO3 release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/release/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete TYPO3 release."
+        },
+        {
+          "info": {
+            "name": "Add TYPO3 Release Notes for Version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/v1/release/:version/release-notes",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add TYPO3 Release Notes for Version."
+        },
+        {
+          "info": {
+            "name": "Get TYPO3 Release Content.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/release/:version/content",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get TYPO3 Release Content."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

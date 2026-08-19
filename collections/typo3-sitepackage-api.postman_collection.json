@@ -1,0 +1,197 @@
+{
+  "item": [
+    {
+      "id": "f0d811b4-dc01-458f-b4c2-fe76e10057be",
+      "name": "sitepackage",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "18b69dd6-77cf-480a-b79e-2eb4429c8de3",
+          "name": "post app api sitepackage createsitepackage",
+          "request": {
+            "name": "post app api sitepackage createsitepackage",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "sitepackage",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/zip"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_package\": \"<string>\",\n  \"typo3_version\": \"<float>\",\n  \"title\": \"<string>\",\n  \"author\": {\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"company\": \"<string>\",\n    \"homepage\": \"<string>\"\n  },\n  \"description\": \"<string>\",\n  \"repository_url\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "425d6a83-1fc6-4128-ad71-3acb06d1b7e1",
+              "name": "Successfully generated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "sitepackage",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/zip"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"base_package\": \"bootstrap_package\",\n  \"typo3_version\": 14.3,\n  \"title\": \"My SitePackage\",\n  \"author\": {\n    \"name\": \"J. Doe\",\n    \"email\": \"info@typo3.com\",\n    \"company\": \"TYPO3\",\n    \"homepage\": \"https://typo3.com\"\n  },\n  \"description\": \"Project Configuration for Client\",\n  \"repository_url\": \"https://github.com/FriendsOfTYPO3/introduction\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/zip"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0f6e74c0-d19d-4fac-9737-c47a30e48952",
+              "name": "Request malformed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "sitepackage",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"base_package\": \"bootstrap_package\",\n  \"typo3_version\": 14.3,\n  \"title\": \"My SitePackage\",\n  \"author\": {\n    \"name\": \"J. Doe\",\n    \"email\": \"info@typo3.com\",\n    \"company\": \"TYPO3\",\n    \"homepage\": \"https://typo3.com\"\n  },\n  \"description\": \"Project Configuration for Client\",\n  \"repository_url\": \"https://github.com/FriendsOfTYPO3/introduction\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "521877af-e807-4791-b5c7-02228c02d209",
+    "name": "get.typo3.org Cache sitepackage API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for getting information about TYPO3 releases",
+      "type": "text/plain"
+    }
+  }
+}

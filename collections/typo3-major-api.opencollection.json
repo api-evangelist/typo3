@@ -1,0 +1,255 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "get.typo3.org Cache Major API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Major",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get releases by major version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version/release/",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get releases by major version."
+        },
+        {
+          "info": {
+            "name": "Get latest release of a major version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version/release/latest",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get latest release of a major version."
+        },
+        {
+          "info": {
+            "name": "Get latest security release of a major version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version/release/latest/security",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get latest security release of a major version."
+        },
+        {
+          "info": {
+            "name": "Get latest release of a major version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version/release/latest/content",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get latest release of a major version."
+        },
+        {
+          "info": {
+            "name": "Get TYPO3 major version requirements.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version/requirements",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get TYPO3 major version requirements."
+        },
+        {
+          "info": {
+            "name": "Create new major TYPO3 version requirement.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/v1/major/:version/requirement/",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create new major TYPO3 version requirement."
+        },
+        {
+          "info": {
+            "name": "Update requirement of major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/api/v1/major/:version/requirement/",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update requirement of major TYPO3 version."
+        },
+        {
+          "info": {
+            "name": "Delete requirement of major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/major/:version/requirement/:category/:name",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete requirement of major TYPO3 version."
+        },
+        {
+          "info": {
+            "name": "Get information about a major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/"
+          },
+          "docs": "Get information about a major TYPO3 version."
+        },
+        {
+          "info": {
+            "name": "Create new major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/v1/major/"
+          },
+          "docs": "Create new major TYPO3 version."
+        },
+        {
+          "info": {
+            "name": "Get hard facts of a major TYPO3 Release.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/major/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get hard facts of a major TYPO3 Release."
+        },
+        {
+          "info": {
+            "name": "Update properties of major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/api/v1/major/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update properties of major TYPO3 version."
+        },
+        {
+          "info": {
+            "name": "Delete major TYPO3 version.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/v1/major/:version",
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete major TYPO3 version."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
