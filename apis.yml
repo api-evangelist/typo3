@@ -6,6 +6,20 @@ description: >-
   managing pages, content elements, media, navigation, and site configuration.
   The headless JSON content API delivers structured page and content data to
   decoupled frontend applications such as PWAs and SPAs.
+deliveryModel:
+  model: open-core
+  license: GPL-2.0
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -141,6 +155,14 @@ apis:
   - type: BaseURL
     url: https://get.typo3.org/api
 common:
+  - type: IssueTracker
+    url: https://github.com/TYPO3-Headless/headless/issues
+  - type: Releases
+    url: https://github.com/TYPO3-Headless/headless/releases
+  - type: CodeOfConduct
+    url: https://github.com/TYPO3-Headless/headless/blob/master/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/TYPO3-Headless/headless/blob/master/CONTRIBUTING.rst
   - type: License
     name: GPL-2.0
     url: https://github.com/TYPO3-Headless/headless/blob/master/LICENSE
