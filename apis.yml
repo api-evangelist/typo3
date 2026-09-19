@@ -133,6 +133,8 @@ apis:
   humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
   baseURL: https://example.typo3.org
   tags:
+  - Releases
+  tags_raw:
   - Release
   properties:
   - type: OpenAPI
