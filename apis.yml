@@ -37,7 +37,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/typo3.png
 url: https://raw.githubusercontent.com/api-evangelist/typo3/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-09-19'
 specificationVersion: '0.23'
 tags:
   - CMS
@@ -197,6 +197,9 @@ common:
     url: rate-limits/typo3-rate-limits.yml
   - type: FinOps
     url: finops/typo3-finops.yml
+  - name: MCP Server Source
+    url: https://github.com/hauptsacheNet/typo3-mcp-server
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -3,7 +3,10 @@
   "feeds": [
     {
       "source": "https://www.linkedin.com/company/typo3-gmbh",
-      "error": "HTTPError"
+      "feed_url": "https://www.linkedin.com/company/typo3-gmbh",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     },
     {
       "source": "https://news.typo3.com/rss",
@@ -13,8 +16,8 @@
       "method": "feed"
     }
   ],
-  "post_count": 82,
-  "fetched": "2026-09-13T13:00:00Z",
+  "post_count": 85,
+  "fetched": "2026-09-19T20:17:39Z",
   "agent_pulled": "2026-07-04",
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
