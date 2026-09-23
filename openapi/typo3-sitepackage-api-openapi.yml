@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: get.typo3.org Cache sitepackage API
+  title: get.typo3.org Sitepackage API
   description: REST API for getting information about TYPO3 releases
   version: 1.0.0
 security:
@@ -26,28 +26,10 @@ paths:
             application/zip: {}
         '400':
           description: Request malformed.
+      summary: Post app api sitepackage createsitepackage
+      x-summary-source: derived
 components:
   schemas:
-    AuthorType:
-      required:
-      - name
-      - email
-      - company
-      - homepage
-      properties:
-        name:
-          type: string
-          example: J. Doe
-        email:
-          type: string
-          example: info@typo3.com
-        company:
-          type: string
-          example: TYPO3
-        homepage:
-          type: string
-          example: https://typo3.com
-      type: object
     SitePackageType:
       required:
       - base_package
@@ -72,6 +54,26 @@ components:
           example: https://github.com/FriendsOfTYPO3/introduction
         author:
           $ref: '#/components/schemas/AuthorType'
+      type: object
+    AuthorType:
+      required:
+      - name
+      - email
+      - company
+      - homepage
+      properties:
+        name:
+          type: string
+          example: J. Doe
+        email:
+          type: string
+          example: info@typo3.com
+        company:
+          type: string
+          example: TYPO3
+        homepage:
+          type: string
+          example: https://typo3.com
       type: object
   securitySchemes:
     Basic:
