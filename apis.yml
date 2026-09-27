@@ -46,7 +46,7 @@ tags:
   - PHP
   - Headless
   - JSON:API
-  - Open-Source
+  - Open Source
 tags_raw:
   - CMS
   - Content Management
@@ -55,6 +55,7 @@ tags_raw:
   - Headless
   - JSON API
   - Open Source
+  - Open-Source
 apis:
 - aid: typo3:headless-json-api
   name: TYPO3 Headless JSON Content API
@@ -144,7 +145,7 @@ apis:
   - type: BaseURL
     url: https://get.typo3.org/api
 - aid: typo3:typo3-sitepackage-api
-  name: TYPO3 sitepackage API
+  name: TYPO3 Sitepackage API
   description: The sitepackage API from TYPO3 — 1 operation(s) for sitepackage.
   humanURL: https://docs.typo3.org/p/friendsoftypo3/headless/main/en-us/Index.html
   baseURL: https://example.typo3.org
