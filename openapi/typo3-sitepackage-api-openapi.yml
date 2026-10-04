@@ -30,6 +30,26 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    AuthorType:
+      required:
+      - name
+      - email
+      - company
+      - homepage
+      properties:
+        name:
+          type: string
+          example: J. Doe
+        email:
+          type: string
+          example: info@typo3.com
+        company:
+          type: string
+          example: TYPO3
+        homepage:
+          type: string
+          example: https://typo3.com
+      type: object
     SitePackageType:
       required:
       - base_package
@@ -54,26 +74,6 @@ components:
           example: https://github.com/FriendsOfTYPO3/introduction
         author:
           $ref: '#/components/schemas/AuthorType'
-      type: object
-    AuthorType:
-      required:
-      - name
-      - email
-      - company
-      - homepage
-      properties:
-        name:
-          type: string
-          example: J. Doe
-        email:
-          type: string
-          example: info@typo3.com
-        company:
-          type: string
-          example: TYPO3
-        homepage:
-          type: string
-          example: https://typo3.com
       type: object
   securitySchemes:
     Basic:
