@@ -47,6 +47,7 @@ tags:
   - Headless
   - JSON:API
   - Open Source
+  - Headless CMS
 tags_raw:
   - CMS
   - Content Management
@@ -56,6 +57,7 @@ tags_raw:
   - JSON API
   - Open Source
   - Open-Source
+  - Headless CMS
 apis:
 - aid: typo3:headless-json-api
   name: TYPO3 Headless JSON Content API
@@ -159,6 +161,9 @@ apis:
   - type: BaseURL
     url: https://get.typo3.org/api
 common:
+  - type: CapabilityMap
+    url: capabilities/typo3-capability-edges.yml
+    name: TYPO3 Business Capability Map
   - type: IssueTracker
     url: https://github.com/TYPO3-Headless/headless/issues
   - type: Releases
