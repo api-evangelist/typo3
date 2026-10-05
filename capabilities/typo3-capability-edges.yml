@@ -1,0 +1,25 @@
+slug: typo3
+provider: TYPO3
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Release
+  spec_file: typo3-release-api-openapi.yml
+  capability_id: BC-4210.30
+  capability_id_l1: BC-4210
+  capability_name: Release Engineering Management
+  confidence: 0.75
+  evidence: POST /api/v1/release/  Add new TYPO3 release; PUT /api/v1/release/{version}/release-notes  Add
+    TYPO3 Release Notes for Version
+  reason: Creating, updating and publishing software releases and their release notes is release versioning
+    and release-note discipline — Release Engineering Management.
