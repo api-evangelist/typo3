@@ -66,3 +66,31 @@ notes: >-
   APIs (Headless JSON API, get.typo3.org Release API, t3api extension) are all
   open-source components available free of charge. Infrastructure and hosting
   costs are the sole financial consideration for self-hosted deployments.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Open Source (Free)
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Extended Long Term Support (ELTS)
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: TYPO3 Association Membership
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods: []
