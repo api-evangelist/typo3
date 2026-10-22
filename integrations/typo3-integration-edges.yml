@@ -1,0 +1,49 @@
+edges:
+- partner_name: CVE Program (CVE Numbering Authorities)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/TYPO3
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: TYPO3 Association
+    matched_domain: typo3.org
+    matched_by: domain
+    cna_id: CNA-2025-0034
+    cna_short_name: TYPO3
+    cna_types:
+    - Open Source
+    cna_roles:
+    - CNA
+    scope: Vulnerabilities in TYPO3 open-source products only, including TYPO3 CMS core and 3rd party extensions
+      for TYPO3, unless covered by the scope of another CNA.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://advisories.typo3.org/
+    disclosure_policy:
+    - https://typo3.org/community/teams/security/security-in-typo3
+    country: Switzerland
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  detected_by: sweep-vulnerability-disclosure-cna.py
+  first_seen: '2026-10-22'
+generated: '2026-10-22'
+method: searched
+source:
+- https://raw.githubusercontent.com/CVEProject/cve-website/dev/src/assets/data/CNAsList.json
+- https://api.first.org/data/v1/teams
+- https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+checked:
+- https://api.first.org/data/v1/teams
+- https://raw.githubusercontent.com/CVEProject/cve-website/dev/src/assets/data/CNAsList.json
+- https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
